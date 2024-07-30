@@ -6,6 +6,7 @@ set -e
 # Variables
 component=$1
 environment=$2
+app_version=$3
 
 # Update the package index
 yum update -y
@@ -29,7 +30,7 @@ yum install ansible -y
 alternatives --set python3 /usr/bin/python3.11
 
 # Run Ansible pull
-ansible-pull -U https://github.com/yjash0801/mechanoidstore-ansible-roles-tf.git -e component=$component -e env=$environment main-tf.yaml
+ansible-pull -U https://github.com/yjash0801/mechanoidstore-ansible-roles-tf.git -e component=$component -e env=$environment -e app_version=$app_version main-tf.yaml
 
 # component=$1
 # environment=$2 #dont use env here, it is reserved in linux

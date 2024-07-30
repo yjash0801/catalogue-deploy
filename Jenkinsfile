@@ -16,10 +16,10 @@ pipeline {
     stages {
         stage('Print version') {
             steps {
-                sh '''
+                sh """
                 echo "version: ${params.version}"
                 echo "environment: ${params.environment}"
-                '''
+                """
             }
         }
     }

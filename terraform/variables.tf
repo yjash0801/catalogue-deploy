@@ -35,3 +35,7 @@ variable "t2-micro" {
 variable "ec2_tags" {
     default = ""
 }
+
+variable "app_version" {
+  
+}

@@ -22,7 +22,9 @@ pipeline {
                     params.environment == 'dev'
                 }
                 steps{
+                    sh """
                     echo "running in dev env"
+                    """
                 }
             }
         }
@@ -32,7 +34,9 @@ pipeline {
                     params.environment == 'prod'
                 }
                 steps{
+                    sh """
                     echo "running in prod env"
+                    """
                 }
             }
         }

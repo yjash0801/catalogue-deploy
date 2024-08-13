@@ -21,11 +21,11 @@ pipeline {
                 expression{
                     params.environment == 'dev'
                 }
-                steps{
-                    sh """
-                    echo "running in dev env"
-                    """
-                }
+            }
+            steps{
+                sh """
+                echo "running in dev env"
+                """
             }
         }
         stage('PROD Environment'){
@@ -33,11 +33,11 @@ pipeline {
                 expression{
                     params.environment == 'prod'
                 }
-                steps{
-                    sh """
-                    echo "running in prod env"
-                    """
-                }
+            }
+            steps{
+                sh """
+                echo "running in prod env"
+                """
             }
         }
         stage('Print version') {
